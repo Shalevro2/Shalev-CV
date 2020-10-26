@@ -1,0 +1,297 @@
+:root {
+    --main-bg-color: #2f8be0;
+}
+
+html,
+body {
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    scroll-behavior: smooth !important;
+}
+
+* {
+    text-decoration: none !important;
+}
+
+.nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a {
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink {
+    color: var(--main-bg-color);
+}
+
+.nav h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+/* #region LANDING CSS */
+
+.landing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+    height: 100vh;
+}
+
+.landingText h1 {
+    font-size: 6vw;
+    margin: 0 !important;
+}
+
+/*#endregion LANDING CSS*/
+
+
+/* #region ABOUT CSS */
+
+.about {
+    height: 100vh;
+    padding: 50px;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutText {
+    position: relative;
+    padding: 0 50px;
+    height: inherit;
+}
+
+.aboutText h1 {
+    position: relative;
+    left: 110px;
+    color: var(--main-bg-color);
+}
+
+.aboutText img {
+    width: 30vw;
+    top: 50px;
+}
+
+.aboutList {
+    width: 50%;
+}
+
+ol {
+    list-style: none;
+    color: var(--main-bg-color);
+}
+
+ol li {
+    font-size: 34px;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+li p {
+    font-size: 16px;
+    color: #000;
+    padding-left: 60px;
+    line-height: 30px;
+    opacity: 0.6;
+}
+
+li span {
+    position: absolute;
+    line-height: 25px;
+    font-weight: 600;
+}
+
+/*#endregion ABOUT CSS*/
+
+/* #region INFO_SECTION CSS */
+
+.infoSection {
+    height: 100vh;
+    padding: 7% 3% 15%;
+}
+
+.skills-row {
+    text-align: center;
+    padding: 2.5%;
+}
+
+.infoHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* #endregion INFO_SECTION CSS */
+
+
+/* #region Contact CSS*/
+
+.contact {
+    height: 600px;
+    background-color: #63ceff;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon {
+    color: #000;
+}
+
+.icon:hover {
+    color: var(--main-bg-color);
+}
+
+/* #endregion Contact CSS*/
+
+/* #region FOOTER CSS */
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footerlinks a {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.footerlinks .mainlink {
+    color: var(--main-bg-color);
+}
+
+/* #endregion FOOTER CSS */
+
+/* #region RESPONSIVE */
+
+
+@media only screen and (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        height: auto;
+        overflow-y: hidden;
+    }
+
+    .nav h4 {
+        font-size: 6vw;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    .nav .links a {
+        margin-right: 25px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    /* LANDING PAGE */
+
+    .landing {
+        flex-direction: column-reverse;
+        height: 750px;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+    }
+
+    .landingText h1 {
+        font-size: 6vw;
+        margin: 0 !important;
+    }
+
+    /* ABOUT */
+
+    .about {
+        height: auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutText {
+        padding: 0 50px;
+        height: 100px;
+    }
+
+    .aboutText h1 {
+        left: 40px;
+        font-size: 5vw;
+    }
+
+    .aboutText img {
+        visibility: hidden;
+    }
+
+    .aboutList {
+        width: 75%;
+    }
+
+    ol li {
+        font-size: 26px;
+    }
+
+    li p {
+        font-size: 14px;
+    }
+
+    .infoSection {
+        height: 1000px;
+    }
+
+    .contact {
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer {
+        padding-bottom: 40px;
+    }
+
+}
+
+
+/*#endregion RESPONSIVE*/
